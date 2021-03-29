@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="recordControl.onDeleteController">
+    <Label text="warning! Before searching a name make your record is sorted by name" textFill="RED">
+        <font>
+          <Font size="14.0"/>
+        </font>
+    </Label>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <Label text="Enter the record name you want to delete  "/>
+        <TextField fx:id="getInput" onAction="#oneTextFieldClicked" promptText="Name"/>
+        <VBox.margin>
+         <Insets top="20.0"/>
+        </VBox.margin>
+    </HBox>
+    <Label fx:id="output" disable="true" text="Output"/>
+</VBox>

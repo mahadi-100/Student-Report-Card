@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recordControl.OnModifyController">
+    <Label text="warning! Before searching a name make your record is sorted by name" textFill="#fc0000">
+        <font>
+          <Font size="14.0" />
+        </font>
+      <VBox.margin>
+         <Insets bottom="40.0" />
+      </VBox.margin>
+    </Label>
+    <HBox alignment="CENTER">
+        <Label text="Enter the student name whose record you want to modify  " />
+        <TextField fx:id="getInput" onAction="#onTextFieldClick" promptText="Name" />
+    </HBox>
+    <HBox alignment="CENTER">
+        <VBox.margin>
+            <Insets bottom="5.0" top="30.0" />
+        </VBox.margin>
+        <Label text="Enter new Name  " />
+        <TextField fx:id="nameInput" promptText="Name" />
+    </HBox>
+    <HBox alignment="CENTER">
+        <VBox.margin>
+            <Insets bottom="5.0" top="10.0" />
+        </VBox.margin>
+        <Label text="Enter new ID  " />
+        <TextField fx:id="idInput" promptText="ID (String)" />
+    </HBox>
+    <HBox alignment="CENTER">
+        <VBox.margin>
+            <Insets bottom="5.0" top="10.0" />
+        </VBox.margin>
+        <Label text="Enter new Marks  " />
+        <TextField fx:id="marksInput" promptText="Marks" />
+    </HBox>
+   <Button fx:id="idBtn" disable="true" mnemonicParsing="false" onAction="#onSaveClicked" text="Save">
+      <VBox.margin>
+         <Insets top="20.0" />
+      </VBox.margin>
+   </Button>
+</VBox>
