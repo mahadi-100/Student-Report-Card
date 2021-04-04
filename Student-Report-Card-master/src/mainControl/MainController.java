@@ -1,13 +1,16 @@
 package mainControl;
 
-import complexActions.ClickActions;
 
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import records.RecordInfo;
 import records.Records;
@@ -23,11 +26,9 @@ public class MainController {
 
     public static final ArrayList<RecordInfo> list = new Records().getList();
 
-
-    public void onPreSavedClicked() {
-        ClickActions.showTheList("PreSaved Records", 1, list);
+    public void onPreSavedClicked() throws IOException {
+        commonSortingLayout("PreSaved Records ");
     }
-
 
     public void saveButtonClicked() {
         String name = IDStudentName.getText();
@@ -43,40 +44,45 @@ public class MainController {
         IDStudentMarks.setText("");
     }
 
-
-    public void onSortByNameClicked() {
-        new SortByName().quickSort(list, 0, list.size() - 1);
-        ClickActions.showTheList("Sort by names", 1, list);
+    public void onSortByNameClicked() throws IOException {
+       new SortByName().quickSort(list, 0, list.size() - 1);
+       commonSortingLayout("Sorted By Name");
     }
 
 
-    public void onSortByMarksClicked() {
-        new SortByMarks().quickSort(list, 0, list.size() - 1);
-        ClickActions.showTheList("Sort by marks", 2, list);
+    public void onSortByMarksClicked() throws IOException {
+       new SortByMarks().quickSort(list, 0, list.size() - 1);
+       commonSortingLayout("Sorted By Marks");
     }
 
 
     public void onSpecificReportClicked() throws IOException {
-        commonSteps("Specific Records", "/recordControl/onSpecific.fxml");
+        CommonRecordChangeLayout("Specific Records", "/recordControl/onSpecific.fxml");
     }
-
 
     public void onStudentGradesClicked() {
-        ClickActions.showTheList("All students Grades", 3, list);
+        new StudentGrades().showGrades();
     }
-
 
     public void onModifyClicked() throws IOException {
-        commonSteps("Modify Records", "/recordControl/onModify.fxml");
+        CommonRecordChangeLayout("Modify Records", "/recordControl/onModify.fxml");
     }
-
 
     public void onDeleteClicked() throws IOException {
-        commonSteps("Delete Records", "/recordControl/onDelete.fxml");
+        CommonRecordChangeLayout("Delete Records", "/recordControl/onDelete.fxml");
     }
 
-    private void commonSteps(String title, String path) throws IOException {
+    private void CommonRecordChangeLayout(String title, String path) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(path));
+
+        Stage stage = new Stage();
+        stage.setTitle(title);
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    
+    private void commonSortingLayout(String title) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sortAndSearch/Sort.fxml"));
 
         Stage stage = new Stage();
         stage.setTitle(title);
