@@ -6,18 +6,25 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainControl.MainController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #6cc4c0;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainControl.MainController">
     <HBox alignment="CENTER">
-        <Label text="There are already some saved records">
+        <Label text="There are already some saved records" textFill="#9e0988">
             <HBox.margin>
                 <Insets right="10.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
         </Label>
-        <Button id="preSavedRecords" mnemonicParsing="false" onAction="#onPreSavedClicked" text="PreSaved Records">
+        <Button id="preSavedRecords" mnemonicParsing="false" onAction="#onPreSavedClicked" text="PreSaved Records" textFill="#c10b2d">
          <HBox.margin>
             <Insets />
-         </HBox.margin></Button>
+         </HBox.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
       <VBox.margin>
          <Insets bottom="40.0" />
       </VBox.margin>
@@ -26,10 +33,13 @@
         <VBox.margin>
             <Insets bottom="15.0" />
         </VBox.margin>
-        <Label text="Enter Student Name">
+        <Label text="Enter Student Name" textFill="#9e0988">
             <HBox.margin>
                 <Insets right="15.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
         </Label>
         <TextField id="studentName" fx:id="IDStudentName" promptText="Name">
             <HBox.margin>
@@ -41,10 +51,13 @@
         <VBox.margin>
             <Insets bottom="15.0" />
         </VBox.margin>
-        <Label text="Enter Student ID">
+        <Label text="Enter Student ID" textFill="#9e0988">
             <HBox.margin>
                 <Insets right="15.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
         </Label>
         <TextField id="studentId" fx:id="IDStudentId" promptText="ID (String)">
             <HBox.margin>
@@ -56,10 +69,13 @@
         <VBox.margin>
             <Insets bottom="15.0" />
         </VBox.margin>
-        <Label text="Enter Student Marks">
+        <Label text="Enter Student Marks" textFill="#9e0988">
             <HBox.margin>
                 <Insets right="15.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
         </Label>
         <TextField id="studentMarks" fx:id="IDStudentMarks" promptText="Marks">
             <HBox.margin>
@@ -67,44 +83,65 @@
             </HBox.margin>
         </TextField>
     </HBox>
-    <Button id="save" fx:id="IDSave" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save">
+    <Button id="save" fx:id="IDSave" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save" textFill="#cf0b36">
         <VBox.margin>
           <Insets bottom="10.0" />
         </VBox.margin>
+      <font>
+         <Font name="System Bold Italic" size="16.0" />
+      </font>
     </Button>
     <HBox alignment="CENTER">
         <VBox.margin>
-            <Insets top="20.0" />
+            <Insets top="30.0" />
         </VBox.margin>
-        <Button id="sortByName" mnemonicParsing="false" onAction="#onSortByNameClicked" text="SortByName">
+        <Button id="sortByName" mnemonicParsing="false" onAction="#onSortByNameClicked" text="SortByName" textFill="#811a00">
             <HBox.margin>
                 <Insets right="10.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
         </Button>
-        <Button id="sortByMarks" mnemonicParsing="false" onAction="#onSortByMarksClicked" text="SortByMarks">
+        <Button id="sortByMarks" mnemonicParsing="false" onAction="#onSortByMarksClicked" text="SortByMarks" textFill="#811a00">
             <HBox.margin>
                 <Insets right="10.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
         </Button>
-        <Button id="specificReport" mnemonicParsing="false" onAction="#onSpecificReportClicked" text="Specific Report">
+        <Button id="specificReport" mnemonicParsing="false" onAction="#onSpecificReportClicked" text="Specific Report" textFill="#811a00">
             <HBox.margin>
                 <Insets right="10.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
         </Button>
-        <Button id="studentGrades" mnemonicParsing="false" onAction="#onStudentGradesClicked" text="Student Grades">
+        <Button id="studentGrades" mnemonicParsing="false" onAction="#onStudentGradesClicked" text="Student Grades" textFill="#811a00">
             <HBox.margin>
                 <Insets right="10.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
         </Button>
-        <Button id="modify" mnemonicParsing="false" onAction="#onModifyClicked" text="Modify">
+        <Button id="modify" mnemonicParsing="false" onAction="#onModifyClicked" text="Modify" textFill="#811a00">
             <HBox.margin>
                 <Insets right="10.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
         </Button>
-        <Button id="delete" mnemonicParsing="false" onAction="#onDeleteClicked" text="Delete">
+        <Button id="delete" mnemonicParsing="false" onAction="#onDeleteClicked" text="Delete" textFill="#811a00">
             <HBox.margin>
                 <Insets right="10.0" />
             </HBox.margin>
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
         </Button>
     </HBox>
 </VBox>
